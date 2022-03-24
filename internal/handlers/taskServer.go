@@ -1,8 +1,7 @@
 package handlers
 
 import (
-	"encoding/json"
-	"net/http"
+	"github.com/kataras/iris/v12"
 	"tasks/internal/taskStore"
 )
 
@@ -18,14 +17,7 @@ func NewTaskServer() *taskServer {
 	return &server
 }
 
-func (t taskServer) HandlerTask(w http.ResponseWriter, req *http.Request) {
+func (t taskServer) HandlerTask(ctx iris.Context) {
 	tasks := t.store.GetAllTasks()
-	js, err := json.Marshal(tasks)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(js)
-
+	ctx.JSON(tasks)
 }

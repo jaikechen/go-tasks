@@ -1,15 +1,15 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"github.com/kataras/iris/v12"
 	"tasks/internal/handlers"
 )
 
 func main() {
+	app := iris.New()
 	server := handlers.NewTaskServer()
+	app.Get("/", server.HandlerTask)
 
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", server.HandlerTask)
-	log.Fatal(http.ListenAndServe("localhost:2022", mux))
+	app.Listen(":8080")
+
 }
