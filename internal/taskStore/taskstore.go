@@ -1,62 +1,26 @@
 package taskStore
 
 import (
-	"database/sql"
+	"context"
 	_ "github.com/go-sql-driver/mysql"
-	"log"
-	"tasks/model"
+	"github.com/jmoiron/sqlx"
+	models "tasks/my_models"
 	"time"
 )
 
 type TaskStore struct {
-	tasks  map[int]model.Task
-	nextId int
+	db *sqlx.DB
 }
 
-func New() *TaskStore {
-	return &TaskStore{}
+func New(d *sqlx.DB) *TaskStore {
+	return &TaskStore{
+		db: d,
+	}
 }
 
 func (ts *TaskStore) CreateTask(text string, tags []string, due time.Time) int {
-	ts.nextId++
-	t := model.Task{
-		Id:   ts.nextId,
-		Text: text,
-		Tags: tags,
-		Due:  due,
-	}
-	t.Due.Date()
-	ts.tasks[ts.nextId] = t
-	return ts.nextId
+	return 0
 }
-func (ts *TaskStore) GetAllTasks() []model.Task {
-	var tasks []model.Task
-
-	db, err := sql.Open("mysql", "mailtrain:mailtrain@tcp(127.0.0.1:4306)/jackie")
-	defer db.Close()
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	res, err := db.Query("SELECT id,name FROM tasks")
-
-	defer res.Close()
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	for res.Next() {
-
-		var task model.Task
-		err := res.Scan(&task.Id, &task.Text)
-
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		tasks = append(tasks, task)
-	}
-	return tasks
+func (ts *TaskStore) GetAllTasks(c context.Context) ([]*models.Task, error) {
+	return models.Tasks().All(c, ts.db)
 }

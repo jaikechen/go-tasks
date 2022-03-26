@@ -1,0 +1,12 @@
+output   = "my_models"
+wipe     = true
+no-tests = true
+add-enum-types = true
+
+[mysql]
+  dbname  = "jackie"
+  host    = "localhost"
+  port    = 4306
+  user    = "mailtrain"
+  pass    = "mailtrain"
+  sslmode = "false"
