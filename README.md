@@ -1,8 +1,8 @@
 # go-tasks
 
 Path to full stack - a task management project. \
-\
-Go basic \
+
+Go basic 
 1. golang cheat sheet \
 2. implement store via Map \
 
