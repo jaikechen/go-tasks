@@ -11,7 +11,7 @@ Rest Server
 4. using a web framework - iris   
 5. middleware - token authentication   
 
-Mysql 
+Mysql   
 6. saving tasks to mysql using standard libary    
 7. SQLX vs sql boiler vs gorm     
 
