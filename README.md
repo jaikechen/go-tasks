@@ -6,14 +6,14 @@ Go basic
 1. golang cheat sheet 
 2. implement store via Map 
 
-Rest Server 
+Rest Server   
 3. add handler via standard library   
-4. using a web framework - iris 
-5. middleware - token authentication 
+4. using a web framework - iris   
+5. middleware - token authentication   
 
 Mysql 
-6. saving tasks to mysql using standard libary 
-7. SQLX vs sql boiler vs gorm  
+6. saving tasks to mysql using standard libary    
+7. SQLX vs sql boiler vs gorm     
 
 React basic 
 
