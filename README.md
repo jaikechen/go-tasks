@@ -8,14 +8,21 @@ https://eli.thegreenplace.net/2021/rest-servers-in-go-part-1-standard-library/
 ## Rest Server   
 ### add handler via standard library   
 https://eli.thegreenplace.net/2021/rest-servers-in-go-part-1-standard-library/
-5. using a web framework - iris   
-6. middleware - token authentication   
+### using a web framework - iris   
+https://github.com/kataras/iris
+### middleware - token authentication   
+https://github.com/vivi5342/project-based-learning#go
 
 ## Mysql   
-6. saving tasks to mysql using standard libary    
-7. SQLX vs sql boiler vs gorm     
+### saving tasks to mysql using standard libary    
+https://zetcode.com/golang/mysql/
+### SQLX vs sql boiler vs gorm     
+https://github.com/jmoiron/sqlx
+https://github.com/volatiletech/sqlboiler
+
 
 ## React MAIN CONCEPTS 
+https://reactjs.org/docs/hello-world.html
 1. Hello World 
 2. Introducing JSX 
 3. Rendering Elements 
@@ -29,6 +36,7 @@ https://eli.thegreenplace.net/2021/rest-servers-in-go-part-1-standard-library/
 11. Composition vs Inheritance 
 
 ## Hook 
+https://reactjs.org/docs/hooks-intro.html
 1. Introducing Hooks 
 2. Hooks at a Glance 
 3. Using the State Hook 
