@@ -1,13 +1,15 @@
 # tasks: Path to full stack - a task management project. 
 
 ## Go basic 
-1. golang cheat sheet 
-2. implement store via Map 
-
+### golang cheat sheet 
+https://github.com/a8m/golang-cheat-sheet
+## implement store via Map 
+https://eli.thegreenplace.net/2021/rest-servers-in-go-part-1-standard-library/
 ## Rest Server   
-3. add handler via standard library   
-4. using a web framework - iris   
-5. middleware - token authentication   
+### add handler via standard library   
+https://eli.thegreenplace.net/2021/rest-servers-in-go-part-1-standard-library/
+5. using a web framework - iris   
+6. middleware - token authentication   
 
 ## Mysql   
 6. saving tasks to mysql using standard libary    
