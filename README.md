@@ -49,3 +49,6 @@ https://www.digitalocean.com/community/tutorials/how-to-build-a-react-to-do-app-
 
 ## How to fetch data with React Hooks
 https://www.robinwieruch.de/react-hooks-fetch-data/
+
+## React Hook Form: 
+https://blog.logrocket.com/react-hook-form-complete-guide/
